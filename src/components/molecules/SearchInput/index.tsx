@@ -160,6 +160,7 @@ const SkillLargeSearchInput = () => {
 
   const onSubmit = (data: any) => {
     setSkillSearchInput(data['SearchInput/skill'])
+    // console.log(data)
   }
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

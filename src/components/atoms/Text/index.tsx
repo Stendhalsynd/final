@@ -232,7 +232,7 @@ const Text = styled.span<TextProps>`
 
 Text.defaultProps = {
   variant: 'medium',
-  color: 'blaack',
+  color: 'black',
 }
 
 export default Text

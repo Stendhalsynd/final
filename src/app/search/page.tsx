@@ -23,6 +23,7 @@ const WorkerInfoList = () => {
   const fieldInput = useRecoilValue(fieldInputState)
   const modalOpenState = useRecoilValue(modalState)
   const countData = useRecoilValue(countDataState)
+  // console.log(skillInput) -> header 버튼들 눌렀을 때 데이터 초기화되는지 확인
   return (
     <WorkerInfoListLayout>
       <Flex
