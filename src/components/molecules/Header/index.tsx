@@ -1,7 +1,6 @@
 'use client'
 
 import axios from 'axios'
-import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { Icon, Logo, Text } from 'components/atoms/index.ts'
 import { Flex } from 'components/layout/index.ts'
@@ -99,40 +98,37 @@ const Header = () => {
       top={'0'}
       zIndex={999}
     >
-      <Link href="/" scroll={false}>
+      <a href="/">
         <Flex>
           <Logo width={60} />
         </Flex>
-      </Link>
+      </a>
+
       <Flex
         justifyContent={'space-evenly'}
         width={'400px'}
         display={{ base: 'none', md: 'flex' }}
       >
-        <Link href="/search" scroll={false}>
+        <a href="/search">
           <Text variant="smallBold" color={'white'}>
             멘토 찾기
           </Text>
-        </Link>
-        <Link
+        </a>
+        <a
           href={roleType === 'WORKER' ? '/workerChat' : '/seekerChat'}
-          scroll={false}
           onClick={handleClickChat}
         >
           <Text variant="smallBold" color={'white'}>
             나의 채팅
           </Text>
-        </Link>
+        </a>
         {isLoggedIn ? (
           <>
-            <Link
-              href={roleType === 'WORKER' ? '/workers/edit' : '/seekers/edit'}
-              scroll={false}
-            >
+            <a href={roleType === 'WORKER' ? '/workers/edit' : '/seekers/edit'}>
               <Text variant="smallBold" color={'white'}>
                 마이페이지
               </Text>
-            </Link>
+            </a>
             <Text
               variant="smallBold"
               color={'white'}
@@ -143,11 +139,11 @@ const Header = () => {
             </Text>
           </>
         ) : (
-          <Link href="/login" scroll={false}>
+          <a href="/login">
             <Text variant="smallBold" color={'white'}>
               로그인
             </Text>
-          </Link>
+          </a>
         )}
       </Flex>
 
